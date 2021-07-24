@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Test Calculator</title>
+
+    <!-- Google web fonts -->
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" />
+
+    <!-- Application styles. -->
+    <link rel="stylesheet" href="assets/styles/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/styles/index.css" />
+</head>
+
+<body>
+    <!-- Application container. -->
+    <main id="calculator"></main>
+    <!-- Application templates. -->
+    <!-- Calculator Display template. -->
+    <script type="text/template" id="display-template">
+        <div class="row">
+            <div class="span5">
+                <input type="text" class="span5 text-right" value="<%= result %>" disabled="disabled" />
+            </div>
+        </div>
+    </script>
+
+    <!-- Calculator template. -->
+    <script type="text/template" id="app-template">
+        <div class="container">
+            <div class="row">
+                <div class="span5 offset4 display">
+                    <!-- Calculator Display placeholder. -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="span1 btn-memoryPlus offset4"></div>
+                <div class="span1 btn-memoryMinus"></div>
+                <div class="span1 btn-memoryRecallClear"></div>
+                <div class="span1 btn-sign"></div>
+                <div class="span1 btn-clear"></div>
+            </div>
+            <div class="row">
+                <div class="span1 btn-7 offset4"></div>
+                <div class="span1 btn-8"></div>
+                <div class="span1 btn-9"></div>
+                <div class="span1 btn-percentage"></div>
+                <div class="span1 btn-root"></div>
+            </div>
+            <div class="row">
+                <div class="span1 btn-4 offset4"></div>
+                <div class="span1 btn-5"></div>
+                <div class="span1 btn-6"></div>
+                <div class="span1 btn-multiply"></div>
+                <div class="span1 btn-divide"></div>
+            </div>
+            <div class="row">
+                <div class="span1 btn-1 offset4"></div>
+                <div class="span1 btn-2"></div>
+                <div class="span1 btn-3"></div>
+                <div class="span1 btn-plus"></div>
+                <div class="span1 btn-minus"></div>
+            </div>
+            <div class="row">
+                <div class="span2 btn-0 offset4"></div>
+                <div class="span1 btn-dot"></div>
+                <div class="span2 btn-return"></div>
+            </div>
+        </div>
+    </script>
+
+    <!-- Calculator Button template. -->
+    <script type="text/template" id="button-template">
+        <div class="row">
+            <button class="btn <%= className %>" data-value="<%= value %>">
+                <%= value %>
+            </div>
+        </div>
+    </script>
+    
+        <!-- JavaScript Includes -->
+        <!-- Application libs. -->
+        <script src="assets/js/libs/jquery-1.9.1.min.js"></script>
+        <script src="assets/js/libs/underscore-min.js"></script>
+        <script src="assets/js/libs/backbone-min.js"></script>
+        <!-- Application models. -->
+        <script src="assets/js/models/button.js"></script>
+        <script src="assets/js/models/calculator.js"></script>
+        <!-- Application views. -->
+        <script src="assets/js/views/display.js"></script>
+        <script src="assets/js/views/button.js"></script>
+        <script src="assets/js/views/app.js"></script>
+
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>
